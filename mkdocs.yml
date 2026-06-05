@@ -1,0 +1,55 @@
+site_name: RanDistViewer
+site_url: https://randy-afk.github.io/RanDistViewer/
+repo_url: https://github.com/randy-afk/RanDistViewer
+repo_name: randy-afk/RanDistViewer
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: custom
+    accent: deep orange
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+  logo: assets/logo_docs.png
+  favicon: assets/logo_docs.png
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Installation: installation.md
+    - Quickstart: quickstart.md
+  - GUI Reference:
+    - Overview: gui/overview.md
+    - Plot Panel: gui/plot_panel.md
+    - Sidebar: gui/sidebar.md
+    - Optics Window: gui/optics_window.md
+    - Dialogs: gui/dialogs.md
+  - Physics:
+    - RF Bucket: physics/rf_bucket.md
+    - Beam Statistics: physics/beam_stats.md
+  - File Formats: file_formats.md
+  - Sessions: session.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - tables
+  - attr_list
