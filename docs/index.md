@@ -9,7 +9,7 @@ Part of the **Ran\*** suite of accelerator physics tools developed at Jefferson 
 ## Overview
 
 RanDistViewer visualises particle bunch distributions from ELEGANT `watch` and
-`buncher` output files. Each file contains many pages — one per beam turn — and
+`watch` output files. Each file contains many pages — one per beam turn — and
 the viewer plays through them as a high-speed animation using a blit-based
 Matplotlib pipeline that bypasses full redraws between frames.
 
@@ -22,7 +22,7 @@ configurable panel, coloured distinctly, and animated in lock-step.
 
 | Category | Capability |
 |---|---|
-| **Data** | Binary SDDS bunch files (ELEGANT `watch`, `buncher`, etc.) |
+| **Data** | Binary SDDS bunch files (ELEGANT `watch` output) |
 | **Panels** | Multi-panel grid; up to 6 independent phase-space plots |
 | **Plot modes** | Scatter, 2D heatmap (linear / log) with Gaussian smoothing |
 | **Animation** | Blit-based frame-by-frame playback; adjustable speed |

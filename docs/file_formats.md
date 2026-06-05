@@ -6,7 +6,7 @@ RanDistViewer reads three external file formats.
 
 ## Binary SDDS bunch files
 
-ELEGANT produces binary SDDS files from `watch` and `buncher` elements. These
+ELEGANT produces binary SDDS files from `watch` elements. These
 are the primary input to RanDistViewer.
 
 ### Column layout
