@@ -93,11 +93,11 @@ with the standard 8-column particle layout:
 
 ## Author
 
-Randika Wickramasinghe — randika@jlab.org  
+Randika Gamage — randika@jlab.org  
 Jefferson Lab, Newport News VA
 
 ---
 
 ## License
 
-Jefferson Lab internal use. Not for public distribution.
+MIT License — see [LICENSE](LICENSE) for details.
