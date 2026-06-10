@@ -51,7 +51,7 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -675,10 +675,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#files-section" class="md-nav__link">
+  <a href="#display" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Files section
+        DISPLAY
       
     </span>
   </a>
@@ -686,10 +686,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#plot-section" class="md-nav__link">
+  <a href="#plot-mode" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Plot section
+        PLOT MODE
       
     </span>
   </a>
@@ -697,10 +697,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#axis-section" class="md-nav__link">
+  <a href="#playback" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Axis section
+        PLAYBACK
       
     </span>
   </a>
@@ -708,32 +708,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#overlays-section" class="md-nav__link">
+  <a href="#particle-tracking" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overlays section
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#export-section" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Export section
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sidebarsection-widget" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        SidebarSection widget
+        PARTICLE TRACKING
       
     </span>
   </a>
@@ -1008,10 +986,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#files-section" class="md-nav__link">
+  <a href="#display" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Files section
+        DISPLAY
       
     </span>
   </a>
@@ -1019,10 +997,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#plot-section" class="md-nav__link">
+  <a href="#plot-mode" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Plot section
+        PLOT MODE
       
     </span>
   </a>
@@ -1030,10 +1008,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#axis-section" class="md-nav__link">
+  <a href="#playback" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Axis section
+        PLAYBACK
       
     </span>
   </a>
@@ -1041,32 +1019,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#overlays-section" class="md-nav__link">
+  <a href="#particle-tracking" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overlays section
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#export-section" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Export section
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sidebarsection-widget" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        SidebarSection widget
+        PARTICLE TRACKING
       
     </span>
   </a>
@@ -1094,18 +1050,11 @@
 
 
 <h1 id="sidebar">Sidebar</h1>
-<p>The sidebar is a scrollable column of collapsible <strong>SidebarSection</strong> groups on
-the right side of the main window. Each section has a pill-shaped header button
-— click it to collapse or expand the section body.</p>
+<p>The sidebar sits on the <strong>left</strong> side of the main window. It contains four
+collapsible sections with pill-shaped header buttons — click a header to
+collapse or expand that section.</p>
 <hr />
-<h2 id="files-section">Files section</h2>
-<p>Lists all currently loaded files. Each entry shows the file label (derived from
-the filename) and its assigned colour swatch.</p>
-<p>Use the <strong>Remove</strong> button next to an entry to unload that file and release its
-memory.</p>
-<hr />
-<h2 id="plot-section">Plot section</h2>
-<p>Controls that affect all panels globally.</p>
+<h2 id="display">DISPLAY</h2>
 <table>
 <thead>
 <tr>
@@ -1116,14 +1065,19 @@ memory.</p>
 </thead>
 <tbody>
 <tr>
-<td>Plot mode</td>
-<td>Combo</td>
-<td><code>Scatter</code> or <code>Heatmap</code></td>
+<td>Marginal histograms</td>
+<td>Checkbox</td>
+<td>1D histograms along both axes of each panel</td>
+</tr>
+<tr>
+<td>Stats overlay</td>
+<td>Checkbox</td>
+<td>Courant-Snyder parameters and emittance ellipse</td>
 </tr>
 <tr>
 <td>Point size</td>
-<td>Spinner</td>
-<td>Scatter marker size (pixels)</td>
+<td>Slider</td>
+<td>Scatter marker size</td>
 </tr>
 <tr>
 <td>Alpha</td>
@@ -1131,24 +1085,72 @@ memory.</p>
 <td>Scatter point transparency (0 – 1)</td>
 </tr>
 <tr>
+<td>Histogram bins</td>
+<td>Slider</td>
+<td>Bin count for marginal histograms</td>
+</tr>
+<tr>
+<td>Axis smoothing (frames)</td>
+<td>Slider</td>
+<td>Number of frames averaged for Roll/Track axis smoothing</td>
+</tr>
+<tr>
+<td>Track window (±σ)</td>
+<td>Slider</td>
+<td>Half-width in σ units for Track axis mode</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="plot-mode">PLOT MODE</h2>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scatter</td>
+<td>Radio</td>
+<td>Individual particle scatter plot</td>
+</tr>
+<tr>
+<td>Heatmap 2D</td>
+<td>Radio</td>
+<td>2D histogram rendered as a colour image</td>
+</tr>
+<tr>
+<td>Colormap</td>
+<td>Combo</td>
+<td>Matplotlib colormap name (default: <code>turbo</code>)</td>
+</tr>
+<tr>
 <td>Heatmap bins</td>
-<td>Spinner</td>
+<td>Slider</td>
 <td>Histogram bin count per axis</td>
 </tr>
 <tr>
-<td>Smooth σ</td>
-<td>Spinner</td>
-<td>Gaussian smoothing width (bin units)</td>
+<td>Smoothing (sigma)</td>
+<td>Slider</td>
+<td>Gaussian smoothing kernel width in bin units</td>
 </tr>
 <tr>
-<td>Log scale</td>
+<td>Log color scale</td>
 <td>Checkbox</td>
-<td>Log colour normalisation in heatmap</td>
+<td>Logarithmic colour normalisation</td>
+</tr>
+<tr>
+<td>Show colorbar</td>
+<td>Checkbox</td>
+<td>Display colour scale bar on heatmap panels</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="axis-section">Axis section</h2>
+<h2 id="playback">PLAYBACK</h2>
 <table>
 <thead>
 <tr>
@@ -1159,19 +1161,19 @@ memory.</p>
 </thead>
 <tbody>
 <tr>
-<td>Smooth N</td>
-<td>Spinner</td>
-<td>Frames averaged for Roll/Track axis smoothing</td>
+<td><strong>▶ Play</strong></td>
+<td>Button</td>
+<td>Start / pause turn-by-turn animation</td>
 </tr>
 <tr>
-<td>σ multiplier</td>
-<td>Spinner</td>
-<td>Half-width in σ units for Track mode</td>
+<td>Speed (fps)</td>
+<td>Slider</td>
+<td>Playback frame rate</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="overlays-section">Overlays section</h2>
+<h2 id="particle-tracking">PARTICLE TRACKING</h2>
 <table>
 <thead>
 <tr>
@@ -1182,47 +1184,25 @@ memory.</p>
 </thead>
 <tbody>
 <tr>
-<td>Histograms</td>
-<td>Checkbox</td>
-<td>Marginal 1D histograms on both axes</td>
+<td>ID entry</td>
+<td>Text field</td>
+<td>Comma-separated particle IDs to track (e.g. <code>42, 100, 283</code>)</td>
 </tr>
 <tr>
-<td>Twiss overlay</td>
-<td>Checkbox</td>
-<td>Courant-Snyder stats and emittance ellipse</td>
+<td><strong>Track</strong></td>
+<td>Button</td>
+<td>Activate tracking for entered IDs</td>
 </tr>
 <tr>
-<td>RF bucket</td>
-<td>Checkbox</td>
-<td>Show RF separatrix (requires RF config)</td>
+<td><strong>Clear tracking</strong></td>
+<td>Button</td>
+<td>Remove all tracking trails</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="export-section">Export section</h2>
-<table>
-<thead>
-<tr>
-<th>Button</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Export HTML</strong></td>
-<td>Save all visible panels as a single interactive Plotly HTML file</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="sidebarsection-widget">SidebarSection widget</h2>
-<p>Each section is implemented as a <code>SidebarSection</code> widget with a collapsible
-body. The pill header uses <code>ACCENT2</code> (<code>#cba6f7</code>) as its background colour,
-matching the RanOptics sidebar style exactly. Clicking the pill toggles
-visibility of the body <code>QWidget</code>.</p>
-<p>Individual rows inside a section are laid out with <code>add_row(label, widget)</code>,
-which creates a <code>QHBoxLayout</code> with a fixed-width label on the left and the
-control widget on the right.</p>
+<p>When tracking is active, trail lines connect each particle's position across
+the last N frames and a dot marks the current position. The status line below
+the buttons shows which particles are currently being tracked.</p>
 
 
 

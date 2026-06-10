@@ -51,7 +51,7 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -619,10 +619,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#main-window-layout" class="md-nav__link">
+  <a href="#layout" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Main window layout
+        Layout
       
     </span>
   </a>
@@ -669,10 +669,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#header-toolbar" class="md-nav__link">
+  <a href="#toolbar" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Header toolbar
+        Toolbar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#turn-slider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Turn slider
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sidebar-left" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sidebar (left)
       
     </span>
   </a>
@@ -684,17 +706,6 @@
     <span class="md-ellipsis">
       
         Panel grid
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sidebar" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sidebar
       
     </span>
   </a>
@@ -1036,10 +1047,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#main-window-layout" class="md-nav__link">
+  <a href="#layout" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Main window layout
+        Layout
       
     </span>
   </a>
@@ -1086,10 +1097,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#header-toolbar" class="md-nav__link">
+  <a href="#toolbar" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Header toolbar
+        Toolbar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#turn-slider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Turn slider
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sidebar-left" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sidebar (left)
       
     </span>
   </a>
@@ -1101,17 +1134,6 @@
     <span class="md-ellipsis">
       
         Panel grid
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sidebar" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sidebar
       
     </span>
   </a>
@@ -1150,21 +1172,27 @@
 
 
 <h1 id="gui-overview">GUI Overview</h1>
-<p>The RanDistViewer window is divided into four main regions.</p>
+<p><img alt="RanDistViewer main window" src="../../assets/main_gui.png" /></p>
 <hr />
-<h2 id="main-window-layout">Main window layout</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>┌─────────────────────────────────────────────────────┐
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>│  Menu bar  (File · View)                            │
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├─────────────────────────────────────────────────────┤
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│  Header  [logo] RanDistViewer  [toolbar buttons]    │
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>├──────────────────────────────────────┬──────────────┤
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│                                      │              │
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│   Panel grid                         │  Sidebar     │
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>│   (one or more PlotPanel widgets)    │  (scrollable)│
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>│                                      │              │
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>├──────────────────────────────────────┴──────────────┤
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>│  Status bar                                         │
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>└─────────────────────────────────────────────────────┘
+<h2 id="layout">Layout</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>┌──────────────────────────────────────────────────────────────────┐
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>│  Menu bar  (File · View)                                         │
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├──────────────────────────────────────────────────────────────────┤
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│  Header  [logo]  RanDistViewer v1.0.0   [author / support info]  │
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>├──────────────────────────────────────────────────────────────────┤
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│  Toolbar  [Open File] [+Panel] [-Panel] [Export] [Save Session]  │
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│           [Load Session] [Corr Matrix] [Stats] [Beam Loss]       │
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>│           [RF Bucket] [Optics] [all]                             │
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>├──────────────────────────────────────────────────────────────────┤
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>│  Turn slider  ──────────●─────────────────────────────────────── │
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>├────────────┬─────────────────────────────────────────────────────┤
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>│            │                                                     │
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>│  Sidebar   │  Panel grid                                         │
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>│  (left)    │  (one or more PlotPanel widgets)                    │
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>│            │                                                     │
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>├────────────┴─────────────────────────────────────────────────────┤
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>│  Status bar  Turn 20 / 265 · Step 1 s = 47.0000 m · 100,000 particles │
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>└──────────────────────────────────────────────────────────────────┘
 </code></pre></div>
 <hr />
 <h2 id="menu-bar">Menu bar</h2>
@@ -1178,19 +1206,19 @@
 </thead>
 <tbody>
 <tr>
-<td>Open SDDS file…</td>
+<td>Open File</td>
 <td>Load a binary SDDS bunch file</td>
 </tr>
 <tr>
-<td>Save Session…</td>
+<td>Save Session</td>
 <td>Save full GUI state to JSON</td>
 </tr>
 <tr>
-<td>Load Session…</td>
+<td>Load Session</td>
 <td>Restore a saved session</td>
 </tr>
 <tr>
-<td>Export panels…</td>
+<td>Export</td>
 <td>Save all panels as interactive Plotly HTML</td>
 </tr>
 </tbody>
@@ -1212,15 +1240,11 @@
 <td>− Panel</td>
 <td>Remove the last plot panel</td>
 </tr>
-<tr>
-<td>Lattice Optics…</td>
-<td>Open the standalone optics viewer window</td>
-</tr>
 </tbody>
 </table>
 <hr />
-<h2 id="header-toolbar">Header toolbar</h2>
-<p>The header row contains the logo, title, and the following action buttons:</p>
+<h2 id="toolbar">Toolbar</h2>
+<p>All major actions are accessible from the single toolbar row:</p>
 <table>
 <thead>
 <tr>
@@ -1230,73 +1254,103 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>◀◀</strong></td>
-<td>Jump to first turn</td>
+<td><strong>Open File</strong></td>
+<td>Load a binary SDDS bunch file</td>
 </tr>
 <tr>
-<td><strong>◀</strong></td>
-<td>Step back one turn</td>
+<td><strong>+ Panel</strong></td>
+<td>Add a plot panel</td>
 </tr>
 <tr>
-<td><strong>▶ / ⏸</strong></td>
-<td>Play / Pause animation</td>
+<td><strong>− Panel</strong></td>
+<td>Remove a plot panel</td>
 </tr>
 <tr>
-<td><strong>▶</strong></td>
-<td>Step forward one turn</td>
+<td><strong>Export</strong></td>
+<td>Export all panels as Plotly HTML</td>
 </tr>
 <tr>
-<td><strong>▶▶</strong></td>
-<td>Jump to last turn</td>
+<td><strong>Save Session</strong></td>
+<td>Save GUI state to JSON</td>
 </tr>
 <tr>
-<td>Turn slider</td>
-<td>Scrub to any turn</td>
+<td><strong>Load Session</strong></td>
+<td>Restore a saved session</td>
 </tr>
 <tr>
-<td>Speed</td>
-<td>Playback FPS (frames per second)</td>
-</tr>
-<tr>
-<td><strong>Loss</strong></td>
-<td>Toggle beam-loss highlighting (red particles)</td>
-</tr>
-<tr>
-<td><strong>Track…</strong></td>
-<td>Open particle tracking configuration</td>
-</tr>
-<tr>
-<td><strong>RF Bucket</strong></td>
-<td>Open RF bucket configuration dialog</td>
+<td><strong>Corr Matrix</strong></td>
+<td>Open the correlation scatter-matrix dialog</td>
 </tr>
 <tr>
 <td><strong>Stats</strong></td>
-<td>Open the stats-over-time panel</td>
+<td>Show σ and emittance evolution plots over all turns</td>
 </tr>
 <tr>
-<td><strong>Corr</strong></td>
-<td>Open the correlation matrix dialog</td>
+<td><strong>Beam Loss</strong></td>
+<td>Toggle beam-loss highlighting (lost particles in red)</td>
+</tr>
+<tr>
+<td><strong>RF Bucket</strong></td>
+<td>Configure and toggle the RF separatrix overlay</td>
+</tr>
+<tr>
+<td><strong>Optics</strong></td>
+<td>Open the Lattice Optics window (requires <code>.twi</code> and <code>.mag</code>)</td>
+</tr>
+<tr>
+<td><strong>all</strong></td>
+<td>Toggle display of all loaded files simultaneously</td>
 </tr>
 </tbody>
 </table>
 <hr />
+<h2 id="turn-slider">Turn slider</h2>
+<p>The turn slider below the toolbar scrubs to any turn in the loaded file.
+The current turn and total number of turns are shown in the status bar
+(<code>Turn 20 / 265</code>).</p>
+<hr />
+<h2 id="sidebar-left">Sidebar (left)</h2>
+<p>The left sidebar contains four collapsible sections with pill-shaped headers:</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DISPLAY</strong></td>
+<td>Marginal histograms, Stats overlay, Point size, Alpha, Histogram bins, Axis smoothing frames, Track window (±σ)</td>
+</tr>
+<tr>
+<td><strong>PLOT MODE</strong></td>
+<td>Scatter / Heatmap 2D toggle, Colormap, Heatmap bins, Smoothing sigma, Log color scale, Show colorbar</td>
+</tr>
+<tr>
+<td><strong>PLAYBACK</strong></td>
+<td>Play/Pause button, Speed (fps) slider</td>
+</tr>
+<tr>
+<td><strong>PARTICLE TRACKING</strong></td>
+<td>Particle ID entry field, Track button, Clear tracking button</td>
+</tr>
+</tbody>
+</table>
+<p>See <a href="../sidebar/">Sidebar</a> for full details.</p>
+<hr />
 <h2 id="panel-grid">Panel grid</h2>
 <p>The panel grid holds one or more <a href="../plot_panel/">PlotPanel</a> widgets arranged
-in a horizontal row. Each panel is self-contained: it has its own file
-selector, axis selectors, axis-mode selector, and a lock button for Fixed mode.</p>
-<p>Panels share the current turn number — advancing the turn slider updates all
-panels simultaneously.</p>
-<hr />
-<h2 id="sidebar">Sidebar</h2>
-<p>The right-hand sidebar is a scrollable column of collapsible
-<a href="../sidebar/">SidebarSection</a> groups. Each group header is a pill-shaped toggle
-button; clicking it collapses or expands the section body.</p>
-<p>Available sections: <strong>Files</strong>, <strong>Plot</strong>, <strong>Axis</strong>, <strong>Overlays</strong>, <strong>Export</strong>.</p>
+in a 2×2 grid (default). Each panel has its own file selector, X/Y axis
+selectors, axis-mode selector, and a <code>Bkt</code> toggle for the RF bucket overlay.</p>
+<p>All panels share the current turn — advancing the slider updates all panels
+simultaneously.</p>
 <hr />
 <h2 id="status-bar">Status bar</h2>
-<p>The status bar at the bottom shows the current turn number, total number of
-turns, particle count on the current page, and any transient status messages
-(file load progress, export confirmation, etc.).</p>
+<p>The status bar at the bottom shows the current turn number, total turns,
+the current <code>s</code> position (element step), and the particle count:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Turn 20 / 265    Step 1  s = 47.0000 m    100,000 particles
+</code></pre></div>
 
 
 
