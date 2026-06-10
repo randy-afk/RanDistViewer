@@ -1,0 +1,41 @@
+[data-md-color-primary="custom"] {
+  --md-primary-fg-color:        #1a1a2e;
+  --md-primary-fg-color--light: #232340;
+  --md-primary-fg-color--dark:  #11111b;
+  --md-typeset-a-color:         #00e676;
+}
+
+/* Brand accent on headings */
+.md-typeset h1,
+.md-typeset h2 {
+  color: #89b4fa;
+}
+
+/* Inline code */
+.md-typeset code {
+  background-color: #313244;
+  color: #cba6f7;
+  border-radius: 4px;
+}
+
+/* Table header */
+.md-typeset table:not([class]) th {
+  background-color: #313244;
+  color: #89b4fa;
+}
+
+/* Nav active link */
+.md-nav__link--active {
+  color: #00e676 !important;
+}
+
+/* Admonition tip accent */
+.md-typeset .admonition.tip,
+.md-typeset details.tip {
+  border-color: #00e676;
+}
+.md-typeset .tip > .admonition-title,
+.md-typeset .tip > summary {
+  background-color: #00e67620;
+  border-color: #00e676;
+}

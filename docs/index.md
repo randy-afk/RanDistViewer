@@ -64,4 +64,4 @@ Randika Wickramasinghe — [randika@jlab.org](mailto:randika@jlab.org)
 Jefferson Lab, Newport News VA
 
 !!! note "License"
-    MIT License — Copyright © Randika Gamage, Jefferson Lab
+    Jefferson Lab internal use. Not for public distribution.

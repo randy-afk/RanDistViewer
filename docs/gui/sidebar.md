@@ -1,70 +1,56 @@
 # Sidebar
 
-The sidebar is a scrollable column of collapsible **SidebarSection** groups on
-the right side of the main window. Each section has a pill-shaped header button
-— click it to collapse or expand the section body.
+The sidebar sits on the **left** side of the main window. It contains four
+collapsible sections with pill-shaped header buttons — click a header to
+collapse or expand that section.
 
 ---
 
-## Files section
-
-Lists all currently loaded files. Each entry shows the file label (derived from
-the filename) and its assigned colour swatch.
-
-Use the **Remove** button next to an entry to unload that file and release its
-memory.
-
----
-
-## Plot section
-
-Controls that affect all panels globally.
+## DISPLAY
 
 | Control | Type | Description |
 |---|---|---|
-| Plot mode | Combo | `Scatter` or `Heatmap` |
-| Point size | Spinner | Scatter marker size (pixels) |
+| Marginal histograms | Checkbox | 1D histograms along both axes of each panel |
+| Stats overlay | Checkbox | Courant-Snyder parameters and emittance ellipse |
+| Point size | Slider | Scatter marker size |
 | Alpha | Slider | Scatter point transparency (0 – 1) |
-| Heatmap bins | Spinner | Histogram bin count per axis |
-| Smooth σ | Spinner | Gaussian smoothing width (bin units) |
-| Log scale | Checkbox | Log colour normalisation in heatmap |
+| Histogram bins | Slider | Bin count for marginal histograms |
+| Axis smoothing (frames) | Slider | Number of frames averaged for Roll/Track axis smoothing |
+| Track window (±σ) | Slider | Half-width in σ units for Track axis mode |
 
 ---
 
-## Axis section
+## PLOT MODE
 
 | Control | Type | Description |
 |---|---|---|
-| Smooth N | Spinner | Frames averaged for Roll/Track axis smoothing |
-| σ multiplier | Spinner | Half-width in σ units for Track mode |
+| Scatter | Radio | Individual particle scatter plot |
+| Heatmap 2D | Radio | 2D histogram rendered as a colour image |
+| Colormap | Combo | Matplotlib colormap name (default: `turbo`) |
+| Heatmap bins | Slider | Histogram bin count per axis |
+| Smoothing (sigma) | Slider | Gaussian smoothing kernel width in bin units |
+| Log color scale | Checkbox | Logarithmic colour normalisation |
+| Show colorbar | Checkbox | Display colour scale bar on heatmap panels |
 
 ---
 
-## Overlays section
+## PLAYBACK
 
 | Control | Type | Description |
 |---|---|---|
-| Histograms | Checkbox | Marginal 1D histograms on both axes |
-| Twiss overlay | Checkbox | Courant-Snyder stats and emittance ellipse |
-| RF bucket | Checkbox | Show RF separatrix (requires RF config) |
+| **▶ Play** | Button | Start / pause turn-by-turn animation |
+| Speed (fps) | Slider | Playback frame rate |
 
 ---
 
-## Export section
+## PARTICLE TRACKING
 
-| Button | Action |
-|---|---|
-| **Export HTML** | Save all visible panels as a single interactive Plotly HTML file |
+| Control | Type | Description |
+|---|---|---|
+| ID entry | Text field | Comma-separated particle IDs to track (e.g. `42, 100, 283`) |
+| **Track** | Button | Activate tracking for entered IDs |
+| **Clear tracking** | Button | Remove all tracking trails |
 
----
-
-## SidebarSection widget
-
-Each section is implemented as a `SidebarSection` widget with a collapsible
-body. The pill header uses `ACCENT2` (`#cba6f7`) as its background colour,
-matching the RanOptics sidebar style exactly. Clicking the pill toggles
-visibility of the body `QWidget`.
-
-Individual rows inside a section are laid out with `add_row(label, widget)`,
-which creates a `QHBoxLayout` with a fixed-width label on the left and the
-control widget on the right.
+When tracking is active, trail lines connect each particle's position across
+the last N frames and a dot marks the current position. The status line below
+the buttons shows which particles are currently being tracked.
